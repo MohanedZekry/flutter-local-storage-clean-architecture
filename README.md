@@ -17,13 +17,13 @@ The project is implementing  a clean architecture & bloc for state management so
   - [Sembast](#sembast)
 
 ## Intro
-State Management: [bloc](https://pub.dev/packages/flutter_bloc)
-Navigation: [go_router](https://pub.dev/packages/go_router)
-Service Locator: [get_it](https://pub.dev/packages/get_it)
-Data Classes: [freezed](https://pub.dev/packages/freezed)
-*Packages*
- -[dartz](https://pub.dev/packages/freezed)
- -[logger](https://pub.dev/packages/logger)
+ - State Management: [bloc](https://pub.dev/packages/flutter_bloc)
+ - Navigation: [go_router](https://pub.dev/packages/go_router)
+ - Service Locator: [get_it](https://pub.dev/packages/get_it)
+ - Data Classes: [freezed](https://pub.dev/packages/freezed)
+ - *Packages*
+   - [dartz](https://pub.dev/packages/freezed)
+   - [logger](https://pub.dev/packages/logger)
 
 ## Modules
 | Modules       | Progress   |
