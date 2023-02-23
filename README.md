@@ -23,7 +23,7 @@ The project is implementing  a clean architecture so that it’s easy to underst
 | Presentation  |            |
 
 ## Implementation
-##### Hive
+#### Hive
 is a lightweight and blazing fast key-value database written in pure Dart.
 Hive having the idea of `boxes` (which store data).
 
@@ -110,7 +110,7 @@ class TasksAdapter extends TypeAdapter<Tasks> {
           typeId == other.typeId;
 }
 ```
-#### Sembast
+### Sembast
 is database stands for Simple Embedded Application Store database
 NoSQL persistent store database solution for single process io applications.
 
