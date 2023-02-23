@@ -28,9 +28,9 @@ The project is implementing  a clean architecture & bloc for state management so
 ## Modules
 | Modules       | Progress   |
 | :----------   | :-------:  |
-| Data          |    ☑️     | 
+| Data          |    ✅     | 
 | Domain        |    ✅     |
-| Presentation  |            |
+| Presentation  |    ☑️      |
 
 ## Implementation
 ### Hive
