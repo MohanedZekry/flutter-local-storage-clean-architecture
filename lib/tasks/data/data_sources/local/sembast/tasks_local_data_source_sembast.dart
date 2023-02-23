@@ -32,7 +32,6 @@ class TasksLocalDataSourceSembast implements TasksLocalDataSource {
   @override
   Future<Unit> addTask(TasksModel task) async {
     try {
-      // insert all articles to  store
       await _tasksStore.add(_database, task.toJson());
       return Future.value(unit);
     } on Exception catch (_) {
@@ -43,7 +42,6 @@ class TasksLocalDataSourceSembast implements TasksLocalDataSource {
   @override
   Future<Unit> deleteAllTasks() async {
     try {
-      // Get a platform-specific directory where persistent app data can be stored
       final appDocumentDir = await getApplicationDocumentsDirectory();
       final dbPath = join(appDocumentDir.path, _kDbFileName);
       await databaseFactoryIo.deleteDatabase(dbPath);
