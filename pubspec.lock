@@ -280,6 +280,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  go_router:
+    dependency: "direct main"
+    description:
+      name: go_router
+      sha256: f48051e213661d03bd846af43bb27c79e3353694358739d6eaf99c54ac295577
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.0.10"
   graphs:
     dependency: transitive
     description:
