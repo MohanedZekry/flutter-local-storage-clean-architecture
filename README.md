@@ -13,6 +13,7 @@ The project is implementing  a clean architecture so that it’s easy to underst
 - [Modules](#modules)
 - [Implementation](#implementation)
   - [Hive](#hive)
+  - [Sembast](#sembast)
 
 ## Modules
 | Modules       | Progress   |
@@ -23,7 +24,7 @@ The project is implementing  a clean architecture so that it’s easy to underst
 
 ## Implementation
 ##### Hive
-Hive is a lightweight and blazing fast key-value database written in pure Dart.
+is a lightweight and blazing fast key-value database written in pure Dart.
 Hive having the idea of `boxes` (which store data).
 
 Hive stores its data in boxes containing key-value sets `Hive.box`
@@ -108,4 +109,24 @@ class TasksAdapter extends TypeAdapter<Tasks> {
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }
+```
+#### Sembast
+is database stands for Simple Embedded Application Store database
+NoSQL persistent store database solution for single process io applications.
+
+```dart
+final _kDbFileName = 'sembast_tasks.db';
+final _kTasksStore = 'tasks_store';
+
+late Database _database;
+
+StoreRef<int, Map<String, dynamic>> _tasksStore;
+
+appDocumentDir = await getApplicationDocumentsDirectory();
+
+dbPath = join(appDocumentDir.path, _kDbFileName);
+
+_database = await databaseFactoryIo.openDatabase(dbPath);
+
+_tasksStore = intMapStoreFactory.store(_kTasksStore);      
 ```
