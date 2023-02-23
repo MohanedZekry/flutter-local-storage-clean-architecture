@@ -23,8 +23,9 @@ The project is implementing  a clean architecture so that it’s easy to underst
 
 ## Implementation
 ##### Hive
-Hive is a quick, lightweight, NoSQL database for flutter and dart applications. Hive is truly helpful if you need a straightforward key-value database without numerous relations.
-Hive having the idea of `boxes` (which store data). A Box must be opened before use. Notwithstanding the plain-enhanced Boxes, there are additional alternatives that help lazy-loading of values and encryption.
+Hive is a lightweight and blazing fast key-value database written in pure Dart.
+Hive having the idea of `boxes` (which store data).
+
 Hive stores its data in boxes containing key-value sets `Hive.box`
 You can call 
 ```dart
