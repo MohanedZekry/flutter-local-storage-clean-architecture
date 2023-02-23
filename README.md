@@ -31,7 +31,7 @@ You can call
 Hive.openBox(‘name’) 
 ```
 regardless of whether you as of now have the box opened elsewhere.
-To implement it 
+<p>Let’s implement the model class</p> 
 ```dart
 import 'package:hive/hive.dart';
 part 'tasks.g.dart';
