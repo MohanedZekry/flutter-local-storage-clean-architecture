@@ -16,6 +16,7 @@ dependencies:
   path_provider: ^2.0.13
   equatable: ^2.0.5
   dartz: ^0.10.1
+  freezed_annotation: ^2.2.0
 
   ## Local Storage Packages ##
   hive: ^2.2.3
@@ -33,6 +34,8 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   hive_generator: ^2.0.0
   build_runner: ^2.3.3
+  freezed: ^2.3.2
+  json_serializable: ^6.6.1
 
 flutter:
 

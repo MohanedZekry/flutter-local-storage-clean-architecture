@@ -1,23 +1,16 @@
-import '../../domain/entities/task.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+part 'tasks_model.freezed.dart';
+part 'tasks_model.g.dart';
 
-class TasksModel extends Tasks{
+@freezed
+class TasksModel with _$TasksModel {
 
-  const TasksModel({
-    required super.title,
-    required super.description,
-    required super.isDone
-  });
+  factory TasksModel({
+    required String title,
+    required String description,
+    @Default(false) bool isDone
+  }) = _TasksModel;
 
-  factory TasksModel.fromJson(Map<String , dynamic> json) => TasksModel(
-      title: json['title'],
-      description: json['description'],
-      isDone: json['isDone']
-  );
-
-  Map<String, dynamic> toJson() => {
-    'title' : title,
-    'description' : description,
-    'isDone' : isDone
-  };
+  factory TasksModel.fromJson(Map<String, dynamic> json) => _$TasksModelFromJson(json);
 
 }
