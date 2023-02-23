@@ -31,4 +31,28 @@ You can call
 Hive.openBox(‘name’) 
 ```
 regardless of whether you as of now have the box opened elsewhere.
+To implement it 
+```dart
+import 'package:hive/hive.dart';
+part 'tasks.g.dart';
 
+@HiveType(typeId: 0)
+class Tasks{
+  @HiveField(0)
+  final String name;
+  @HiveField(1)
+  final String content;
+  @HiveField(2)
+  final bool isDone;
+
+   Tasks({
+    required this.name,
+    required this.content,
+    required this.isDone
+  });
+}
+```
+Then run a code generator by typing the following command in the terminal which will automatically generate database and Adapters for us.
+```js
+$ flutter packages pub run build_runner build
+```
