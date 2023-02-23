@@ -58,7 +58,7 @@ Then run a code generator by typing the following command in the terminal which 
 $ flutter packages pub run build_runner build
 ```
 
-**Note:** File name is `tasks.dart`. We will add a line part 'tasks.g.dart'.Where g stands for generated. Thus new generated file would be tasks.g.dart
+**Note:** Dart File name is `tasks.dart` so i will add part `tasks.g.dart`. g stands for generated. Thus new generated file would be `tasks.g.dart`
 ```dart
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
