@@ -5,6 +5,7 @@ The project is implementing  a clean architecture so that it’s easy to underst
 </i>
 - [hive](https://pub.dev/packages/hive)
 - [sembast](https://pub.dev/packages/sembast)
+- [floor](https://pub.dev/packages/floor)
 - [sqflite](https://pub.dev/packages/sqflite)
 - [shared_preferences](https://pub.dev/packages/shared_preferences)
 - [isar](https://pub.dev/packages/isar)
