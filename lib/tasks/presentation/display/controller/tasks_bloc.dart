@@ -1,8 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import '../../../core/use_case/base_use_case.dart';
-import '../../data/models/tasks_model.dart';
-import '../../domain/use_cases/get_all_tasks_use_case.dart';
+
+import '../../../../core/use_case/base_use_case.dart';
+import '../../../data/models/tasks_model.dart';
+import '../../../domain/use_cases/get_all_tasks_use_case.dart';
 part 'tasks_event.dart';
 part 'tasks_state.dart';
 part 'tasks_bloc.freezed.dart';

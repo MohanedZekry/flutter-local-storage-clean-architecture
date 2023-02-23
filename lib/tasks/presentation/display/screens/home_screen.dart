@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutterhive/app/routes/app_routes.dart';
 import 'package:flutterhive/core/widgets/app_bar_widget.dart';
-import 'package:flutterhive/tasks/presentation/controller/tasks_bloc.dart';
-import 'package:flutterhive/tasks/presentation/widgets/task_list_widget.dart';
+import 'package:go_router/go_router.dart';
+import '../controller/tasks_bloc.dart';
+import '../widgets/task_list_widget.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -13,6 +15,12 @@ class HomeScreen extends StatelessWidget {
     late Widget finalView;
     return Scaffold(
         appBar: getAppBar('Home Screen'),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){
+            GoRouter.of(context).go(AppRouter.addTaskRoute);
+          },
+          child: const Icon(Icons.add),
+        ),
         body: BlocBuilder<TasksBloc, TasksState>(
           builder: (context, state) {
             state.when(

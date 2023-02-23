@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterhive/core/values/dimens.dart';
+import '../../../data/models/tasks_model.dart';
 
-import '../../data/models/tasks_model.dart';
 
 class TaskListWidget extends StatelessWidget {
   final List<TasksModel> tasks;
