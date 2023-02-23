@@ -21,7 +21,7 @@ class TasksLocalDataSourceHive implements TasksLocalDataSource {
       Hive.registerAdapter(TasksAdapter());
       await Hive.openBox<Tasks>(_kTaskBox);
       return true;
-    } on Exception catch (_) {
+    } catch (_) {
       throw ConnectionException();
     }
   }
@@ -33,7 +33,7 @@ class TasksLocalDataSourceHive implements TasksLocalDataSource {
       final convertedTask = Tasks(title: task.title, description: task.description, isDone: task.isDone);
       await tasksBox.add(convertedTask);
       return Future.value(unit);
-    } on Exception catch (_) {
+    } catch (_) {
       throw ConnectionException();
     }
 
@@ -48,7 +48,7 @@ class TasksLocalDataSourceHive implements TasksLocalDataSource {
               title: e.title, description: e.description, isDone: e.isDone))
           .toList();
       return result;
-    } on Exception catch (_) {
+    } catch (_) {
       throw NoDataException();
     }
   }
