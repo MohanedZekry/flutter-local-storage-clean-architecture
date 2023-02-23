@@ -57,3 +57,54 @@ Then run a code generator by typing the following command in the terminal which 
 ```js
 $ flutter packages pub run build_runner build
 ```
+
+**Note:** File name is `tasks.dart`. We will add a line part 'tasks.g.dart'.Where g stands for generated. Thus new generated file would be tasks.g.dart
+```dart
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'tasks.dart';
+
+// **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class TasksAdapter extends TypeAdapter<Tasks> {
+  @override
+  final int typeId = 0;
+
+  @override
+  Tasks read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return Tasks(
+      title: fields[0] as String,
+      description: fields[1] as String,
+      isDone: fields[2] as bool,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, Tasks obj) {
+    writer
+      ..writeByte(3)
+      ..writeByte(0)
+      ..write(obj.title)
+      ..writeByte(1)
+      ..write(obj.description)
+      ..writeByte(2)
+      ..write(obj.isDone);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is TasksAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+```
