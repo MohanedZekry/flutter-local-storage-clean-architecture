@@ -10,13 +10,13 @@ The project is implementing  a clean architecture & bloc for state management so
 - [isar](https://pub.dev/packages/isar)
 
 ## Table of Contents
-- [Intro](#intro)
+- [Setup](#intro)
 - [Modules](#modules)
 - [Implementation](#implementation)
   - [Hive](#hive)
   - [Sembast](#sembast)
 
-## Intro
+## Setup
  - State Management: [bloc](https://pub.dev/packages/flutter_bloc)
  - Navigation: [go_router](https://pub.dev/packages/go_router)
  - Service Locator: [get_it](https://pub.dev/packages/get_it)
