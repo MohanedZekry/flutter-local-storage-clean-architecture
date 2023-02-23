@@ -79,8 +79,8 @@ class TasksAdapter extends TypeAdapter<Tasks> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return Tasks(
-      title: fields[0] as String,
-      description: fields[1] as String,
+      name: fields[0] as String,
+      content: fields[1] as String,
       isDone: fields[2] as bool,
     );
   }
@@ -90,9 +90,9 @@ class TasksAdapter extends TypeAdapter<Tasks> {
     writer
       ..writeByte(3)
       ..writeByte(0)
-      ..write(obj.title)
+      ..write(obj.name)
       ..writeByte(1)
-      ..write(obj.description)
+      ..write(obj.content)
       ..writeByte(2)
       ..write(obj.isDone);
   }
