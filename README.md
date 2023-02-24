@@ -30,7 +30,7 @@ The project is implementing  a clean architecture & bloc for state management so
 | :----------   | :-------:  |
 | Data          |    ✅     | 
 | Domain        |    ✅     |
-| Presentation  |    ☑️      |
+| Presentation  |    ✅      |
 
 ## Implementation
 ### Hive
