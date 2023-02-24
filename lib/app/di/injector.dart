@@ -1,5 +1,6 @@
 import 'package:flutterhive/tasks/data/data_sources/local/hive/tasks_local_data_source_hive.dart';
 import 'package:flutterhive/tasks/data/data_sources/local/sembast/tasks_local_data_source_sembast.dart';
+import 'package:flutterhive/tasks/data/data_sources/local/sqflite/tasks_local_data_source_sqflite.dart';
 import 'package:flutterhive/tasks/data/data_sources/local/tasks_local_data_source.dart';
 import 'package:flutterhive/tasks/data/repositories/tasks_repository_impl.dart';
 import 'package:flutterhive/tasks/domain/repositories/task_repository.dart';
@@ -16,6 +17,7 @@ Future<void> initDependencies() async {
   /// Data Source ///
   injector.registerLazySingleton<TasksLocalDataSource>(() => TasksLocalDataSourceHive());
   //injector.registerLazySingleton<TasksLocalDataSource>(() => TasksLocalDataSourceSembast());
+  //injector.registerLazySingleton<TasksLocalDataSource>(() => TasksLocalDataSourceSqflite());
 
   /// Repository ///
   injector.registerLazySingleton<TasksRepository>(
