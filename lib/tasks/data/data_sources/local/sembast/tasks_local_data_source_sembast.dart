@@ -24,7 +24,7 @@ class TasksLocalDataSourceSembast implements TasksLocalDataSource {
       _database = await databaseFactoryIo.openDatabase(dbPath);
       _tasksStore = intMapStoreFactory.store(_kTasksStore);
       return true;
-    } on Exception catch (_) {
+    } catch (_) {
       throw ConnectionException();
     }
   }
@@ -34,7 +34,7 @@ class TasksLocalDataSourceSembast implements TasksLocalDataSource {
     try {
       await _tasksStore.add(_database, task.toJson());
       return Future.value(unit);
-    } on Exception catch (_) {
+    } catch (_) {
       throw ConnectionException();
     }
   }
@@ -46,7 +46,7 @@ class TasksLocalDataSourceSembast implements TasksLocalDataSource {
       final dbPath = join(appDocumentDir.path, _kDbFileName);
       await databaseFactoryIo.deleteDatabase(dbPath);
       return Future.value(unit);
-    } on Exception catch (_) {
+    } catch (_) {
       throw ConnectionException();
     }
   }
@@ -56,7 +56,7 @@ class TasksLocalDataSourceSembast implements TasksLocalDataSource {
     try {
       await _tasksStore.delete(_database);
       return Future.value(unit);
-    } on Exception catch (_) {
+    } catch (_) {
       throw ConnectionException();
     }
   }
@@ -68,7 +68,7 @@ class TasksLocalDataSourceSembast implements TasksLocalDataSource {
       final response = recordSnapshots.map<TasksModel>(
               (e) => TasksModel.fromJson(e.value)).toList(growable: false);
       return response;
-    } on Exception catch (_) {
+    } catch (_) {
       throw NoDataException();
     }
 
